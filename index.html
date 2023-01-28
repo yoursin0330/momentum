@@ -45,10 +45,19 @@
         
         <span id="dice-game__winner"></span>
     </div>
-    <div class="todays-luck hidden"> 
+    <div class="fortune-cookie"> 
         <!-- 사용자의 좌표, 그 날의 날짜를 조합해서 운세 뽑아냄! -->
-        <h3 class="todays-luck__title">오늘의 운세</h3>
-        <span class="todays-luck__text"></span>
+        <div class="fortune-cookie__ fortune-cookie__before">
+            <img src="https://www.astrology.com/img/games/game-fortune-cookie-1-v3.png" alt="">
+            <span>Click to crack the fortune cookie!</span>
+        </div>
+        <div class="fortune-cookie__ fortune-cookie__after hidden">
+            <img src="https://www.astrology.com/img/games/game-fortune-cookie-2-v3.png" alt="">
+            <div class="fortune-cookie__text-box">
+                <span id="fortune-cookie__text"></span>
+            </div>
+            
+        </div>
     </div>
     <div class="todo">
         <!-- <div class="d-day">
@@ -81,6 +90,7 @@
     <!-- <script src="js/quotes.js"></script> -->
     <script src="js/background.js"></script>
     <!-- <script src="js/dday.js"></script> -->
+    <script src="js/fortune-cookie.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/dice-game.js"></script>
