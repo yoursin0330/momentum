@@ -1,0 +1,15 @@
+/* .todo-box{
+    display: flex;
+    justify-content: center;
+} */
+.checked{
+    color: rgba(0,0,0, 0.8);
+    text-decoration: line-through;
+    font-style: italic;
+}
+ul{
+    padding-inline-start: 0;
+    list-style-type:none;
+}
+li{
+}

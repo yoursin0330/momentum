@@ -1,0 +1,29 @@
+.dice-game{
+    border: 1px solid gray;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding:20px;
+}
+.dice-game .dices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dice-game .dices .dice{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#dice-game__winner{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+.dices img{
+    width: 100px;
+}
