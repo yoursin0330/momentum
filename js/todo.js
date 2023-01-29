@@ -17,20 +17,12 @@ function deleteToDo(event){
 function paintToDo(newTodoObj){
     // todo를 그리는 역할 담당!
     const li=document.createElement("li")
-    const checkBox=document.createElement("input")
-    checkBox.setAttribute("type","checkbox")
-    checkBox.id="checkBox"
-    const checkBoxLabel = document.createElement("label")
-    checkBoxLabel.setAttribute("for","checkBox")
-    // checkBox.addEventListener("change",function(ev){
-    //     ev.target.parentElement.classList.toggle("checked")
-    // })
     const span=document.createElement("span")
     const button=document.createElement("button")
     button.innerText="X"
     button.addEventListener("click", deleteToDo)
-    li.appendChild(checkBox)
-    li.appendChild(checkBoxLabel)
+    // li.appendChild(checkBox)
+    // li.appendChild(checkBoxLabel)
     li.appendChild(span)
     li.appendChild(button)
     span.innerText=newTodoObj.text;
@@ -44,8 +36,8 @@ function handleToDoSubmit(event){
     toDoInput.value=""
     const newTodoObj={
         text:newToDo,
-        id:Date.now(),
-        checked:false
+        id:Date.now()
+        // checked:false
     }
     toDos.push(newTodoObj);
     //toDos는 object를 저장함!

@@ -1,3 +1,9 @@
+.traveling-recommend__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .traveling-recommend__content img{
     max-height: 150px;
     max-width: 150px;
@@ -12,7 +18,20 @@
     border-radius: 30px;
 }
 .traveling-recommend{
-    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 330px;
     text-align: center;
     vertical-align: center;
+    background-color: rgba(255,255,255,0.6);
+}
+.traveling-recommend span{
+    font-size: 20px;
+}
+.traveling-recommend__content span{
+    font-size: 22px;
+
 }
