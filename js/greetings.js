@@ -25,9 +25,9 @@ function paintGreetings(){
     }else if(hours<5 || hours>22){
         greetingExpression=greetingWords[3];
     }else if(hours<18){
-        greetingExpression=greetingWords[2];
-    }else{
         greetingExpression=greetingWords[1];
+    }else{
+        greetingExpression=greetingWords[2];
     }
     greeting.innerText=`${greetingExpression}, ${username}!`
     greeting.classList.remove(HIDDEN_CLASSNAME)
