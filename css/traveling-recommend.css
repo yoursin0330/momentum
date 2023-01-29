@@ -1,0 +1,18 @@
+.traveling-recommend__content img{
+    max-height: 150px;
+    max-width: 150px;
+}
+.traveling-recommend__content div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+}
+.traveling-recommend{
+    font-size: 15px;
+    text-align: center;
+    vertical-align: center;
+}

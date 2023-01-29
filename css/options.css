@@ -1,0 +1,8 @@
+.options{
+    display: flex;
+    align-items: center;
+}
+.options >div{
+    border: 2px solid white;
+    margin: 10px;
+}

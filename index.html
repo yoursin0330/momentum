@@ -8,83 +8,97 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2 id="clock">00:00:00</h2>
-    <form id="login-form" class="hidden">
-        <input required maxlength="15"
-        type="text" placeholder="What is your name?">
-        <button>Log In</button>
-    </form>
-    <div class="upper-box">
-        <h1 id="greeting" class="hidden"></h1>
-        <div id="weather">
-            <div></div>
-            <span></span>
-            <span></span>
+    <header>
+        <div class="upper-box">
+            <div class="upper-box__left">
+                <h2 id="clock">00:00:00</h2>
+                <form id="login-form" class="hidden">
+                    <input required maxlength="15"
+                    type="text" placeholder="What is your name?">
+                    <button>Log In</button>
+                </form>
+                <h1 id="greeting" class="hidden"></h1>
+            </div>
+            <div id="weather">
+                <div></div>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
+    </header>
     
     <!-- 자바스크립트를 사용해서 li 추가할 것임! -->
     <!-- <div id="quote">
         <span></span>
         <span></span>
     </div> -->
-    
+    <main>
+        <div class="page-one todo">       
+            <div class="todo-box">
+                <div class="todo__list">
+                    <span>To do</span>
+                    <ul class="todos">
+                    </ul>
+                </div>
+                <form id="todo__add-form">
+                    <input type="text" required
+                    placeholder="Write a To Do">
+                    <input type="submit" value="+">
+                </form>
+            </div>
+        </div>
 
-    <div class="dice-game">
-        <button id="rolling-dice">Roll the dice</button>
-        <div class="dices">
-            <div class="dice" id="dice-game__user">
-                <img src="img/dices/dice1.png">
-                <span>USER</span>
+
+        <!-- <div class="page-two options">
+            <div class="dice-game">
+                <button id="rolling-dice">Roll the dice</button>
+                <div class="dices">
+                    <div class="dice" id="dice-game__user">
+                        <img src="img/dices/dice1.png">
+                        <span>USER</span>
+                    </div>
+                    <div class="dice" id="dice-game__computer">
+                        <img src="img/dices/dice1.png">
+                        <span>COMPUTER</span>
+                    </div>
+                </div>
+                
+                <span id="dice-game__winner"></span>
+            </div> -->
+            <div class="fortune-cookie"> 
+                <!-- 사용자의 좌표, 그 날의 날짜를 조합해서 운세 뽑아냄! -->
+                <div class="fortune-cookie__ fortune-cookie__before">
+                    <img src="https://www.astrology.com/img/games/game-fortune-cookie-1-v3.png" alt="">
+                    <span>Click to crack the fortune cookie!</span>
+                </div>
+                <div class="fortune-cookie__ fortune-cookie__after hidden">
+                    <img src="https://www.astrology.com/img/games/game-fortune-cookie-2-v3.png" alt="">
+                    <div class="fortune-cookie__text-box">
+                        <span id="fortune-cookie__text"></span>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="dice" id="dice-game__computer">
-                <img src="img/dices/dice1.png">
-                <span>COMPUTER</span>
+            <div class="traveling-recommend">
+                <div class="traveling-recommend__before">
+                    <span>Press allow to get recommendations!</span>
+                </div>
+                <div class="traveling-recommend__content hidden">
+                    <span>Recommended city near you for vacation</span>
+                    <h3 class="traveling-recommend__city"></h3>
+                    <div>
+                        <img src="">
+                    </div>
+                    
+                </div>
             </div>
         </div>
-        
-        <span id="dice-game__winner"></span>
-    </div>
-    <div class="fortune-cookie"> 
-        <!-- 사용자의 좌표, 그 날의 날짜를 조합해서 운세 뽑아냄! -->
-        <div class="fortune-cookie__ fortune-cookie__before">
-            <img src="https://www.astrology.com/img/games/game-fortune-cookie-1-v3.png" alt="">
-            <span>Click to crack the fortune cookie!</span>
-        </div>
-        <div class="fortune-cookie__ fortune-cookie__after hidden">
-            <img src="https://www.astrology.com/img/games/game-fortune-cookie-2-v3.png" alt="">
-            <div class="fortune-cookie__text-box">
-                <span id="fortune-cookie__text"></span>
-            </div>
-            
-        </div>
-    </div>
-    <div class="todo">
-        <!-- <div class="d-day">
-            <form class="d-day__input">
-                <label for="d-day">D - DAY</label>
-                <input type="date" id="d-day">
-                <input type="submit">
-            </form>
-            <div class="d-day__print hiddens">
-                <span></span>
-            </div>
-        </div> -->
-       
-        <div class="todo-box">
-            <div class="todo__list">
-                <span>To do</span>
-                <ul class="todos">
-                </ul>
-            </div>
-            <form id="todo__add-form">
-                <input type="text" required
-                placeholder="Write a To Do">
-                <input type="submit" value="+">
-            </form>
-        </div>
-    </div>
-    
+    </main>
+    <!-- <nav>
+        <button class="nav__to-do nav-pressed"></button>
+        <button class="nav__options"></button>
+    </nav> -->
+
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <!-- <script src="js/quotes.js"></script> -->
@@ -94,5 +108,6 @@
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/dice-game.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
-const images=[
-    "0.jpeg","1.jpeg","2.jpeg"
-]
-document.body.style.backgroundColor="black"
-const chosenImg=images[Math.floor(Math.random()*images.length)]
-document.body.style.backgroundImage=`url(img/${chosenImg})`;
+const IMG_LEN=16;
+document.body.style.backgroundColor="white"
+const chosenImg=Math.floor(Math.random()*IMG_LEN)
+document.body.style.backgroundImage=`url(img/${chosenImg}.jpg)`;
+document.body.style.backgroundSize="cover";
