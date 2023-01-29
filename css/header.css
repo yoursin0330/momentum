@@ -30,6 +30,8 @@ header{
     margin-right: 10px;
 }
 #weather{
+    color: black;
+    font-weight: 600;
     text-align: right;
     display: flex;
     justify-content: end;
