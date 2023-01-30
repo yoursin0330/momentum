@@ -1,10 +1,13 @@
 const API_KEY="9c50a548a1a56ed524f605a3ec0f1553";
 const cities = [
     {"city": "Seoul","lat":37.566,"lon":126.9784,
-    "img":"https://cdn-icons-png.flaticon.com/512/1999/1999739.png"
-    },
+    "img":"https://cdn-icons-png.flaticon.com/512/1999/1999739.png"},
     {"city": "Busan","lat":35.10278,"lon":129.04028,
     "img":"https://as1.ftcdn.net/v2/jpg/05/34/97/32/1000_F_534973217_FgIECuOWnfdoHalT1XZuyybVnkOz10EQ.jpg"},
+    {"city": "Jeju","lat":33.50972,"lon":126.52194,
+    "img":"https://cdn-icons-png.flaticon.com/512/4918/4918411.png"},
+    {"city": "Gyeongju","lat":35.8561719,"lon":129.2247477,
+    "img":"https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13157002&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOC8yMS9DTFMxLzEzMTU3MDAyX0NPTENUXzIwMTgxMTI2XzE=&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004"},
     {"city": "Tokyo","lat":35.6895,"lon":139.69171,
     "img":"https://cdn-icons-png.flaticon.com/512/2314/2314646.png"},
     {"city": "Paris","lat":48.85341,"lon": 2.3488,
@@ -16,9 +19,6 @@ const cities = [
     {"city": "Taipei","lat":25.04776,"lon":121.53185,
     "img":"https://cdn-icons-png.flaticon.com/512/984/984112.png"}
 ]
-// const colorpalette=[
-//     "658864","B7B78A","DDDDDD","FEC868","FDA769","0081B4","D3756B","A0C3D2"
-// ]
 function onGeoOk(position){ //when geolocation was successful
     //JS will give you the position of the user
     const lat=position.coords.latitude;
@@ -43,16 +43,14 @@ function calDistance(hereLat,hereLon){
     let nearestDist=9999;
     let cityImg;
     const backCol = document.body.querySelector(".traveling-recommend__content div")
-    // cities.forEach(cityObj => {
-    //     const dist = Math.hypot(cityObj.lat-hereLat,cityObj.lon-hereLon);
-    //     if (dist<nearestDist && dist>3){
-    //         nearestDist=dist;
-    //         nearestCity=cityObj.city;
-    //         cityImg=cityObj.img;
-    //     }
-    // });
-    nearestCity=cities[1].city;
-    cityImg=cities[1].img;
+    cities.forEach(cityObj => {
+        const dist = Math.hypot(cityObj.lat-hereLat,cityObj.lon-hereLon);
+        if (dist<nearestDist && dist>1){
+            nearestDist=dist;
+            nearestCity=cityObj.city;
+            cityImg=cityObj.img;
+        }
+    });
     document.body.querySelector(".traveling-recommend__city").innerText=nearestCity;
     const travelContent=document.body.querySelector(".traveling-recommend__content");
     travelContent.querySelector("img").src=cityImg;
